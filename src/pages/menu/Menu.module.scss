@@ -1,0 +1,24 @@
+@import 'styles/styles.scss';
+
+.menu {
+    padding: 20px $padding-horizontal;
+}
+
+.header {
+    background-image: url('/assets/menu/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        color: white;
+        font-size: 4rem;
+        min-width: 400px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}
