@@ -1,4 +1,6 @@
 import React from "react"
+import style from './Searcher.module.scss';
+import { CgSearch } from 'react-icons/cg';
 
 interface ISearchProps {
     search: string,
@@ -8,6 +10,9 @@ interface ISearchProps {
 export default function Searcher(props: ISearchProps) {
     const { search, setSearch } = props;
     return(
-        <div></div>
+        <div className={style.buscador}>
+            <input value={search} onChange={event => setSearch(event.target.value)} placeholder="Search"/>
+            <CgSearch size={20} color="#4C4D5E"/>
+        </div>
     )
 }

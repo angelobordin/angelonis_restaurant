@@ -2,9 +2,11 @@ import style from './Menu.module.scss';
 import { ReactComponent as Logo} from 'assets/imgs/logo.svg';
 import Searcher from './searcher/searcher';
 import { useState } from 'react';
+import Filters from './filters/filters';
 
 export default function Menu() {
     const [search, setSearch] = useState('');
+    const [filter, setFilter] = useState<number | null>(null);
 
     return (
         <main>
@@ -17,8 +19,11 @@ export default function Menu() {
                 </div>
             </header>
             <section className={style.menu}>
-                <h3 className={style.menu__titulo}>Cardápio</h3>
+                <h3 className={style.menu__title}>Cardápio</h3>
                 <Searcher search={search} setSearch={setSearch}/>
+                <div className={style.menu__filters}>
+                    <Filters filter={filter} setFilter={setFilter}/>
+                </div>
             </section>
         </main>
     )
